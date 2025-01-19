@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:redirect="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+<div style="text-align: center;">
+    <h1>Login</h1>
+    <form action="/app/authorise" method="post">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Войти</button>
+    </form>
+    <p th:if="${error}" th:text="${error}"></p>
+</div>
+</body>
+</html>
